@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Calculator</title>
+    <script src="taxcal.js"></script>
+    <link rel="stylesheet" href="taxcal.css">
+</head>
+<body>
+    <div class="heading">
+        <marquee behavior="scroll" direction="left" scrollamount="6">
+            <h1>Income Tax Calculator</h1>
+        </marquee>
+    </div>
+
+    <form id="taxCalculatorForm">
+        <label for="salary">Enter your salary:</label>
+        <input type="number" id="salary" name="salary" required>
+
+        <label for="dearnessAllowance">Dearness Allowance (80%):</label>
+        <input type="number" id="dearnessAllowance" name="dearnessAllowance" required>
+
+        <label for="houseRentAllowance">House Rent Allowance (30%):</label>
+        <input type="number" id="houseRentAllowance" name="houseRentAllowance" required>
+
+        <label for="travelAllowance">Travel Allowance (10%):</label>
+        <input type="number" id="travelAllowance" name="travelAllowance" required>
+
+        <button type="button" onclick="calculateTax()">Calculate Tax</button>
+    </form>
+
+    <p>Total Calculated Tax: <span id="totalTaxDisplay">-</span></p>
+</body>
+</html>
